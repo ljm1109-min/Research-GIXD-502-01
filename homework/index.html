@@ -118,6 +118,21 @@ section{padding-block:96px;display:grid;gap:48px}
 figure{margin:0;min-width:0}
 .svgcard{background:var(--paper);border-radius:18px;border:1px solid var(--line);padding:14px;overflow-x:auto;box-shadow:0 18px 40px -26px rgba(43,33,27,.5)}
 .map-fig{display:grid;gap:12px}
+.wpm svg{min-width:1100px}
+.wp-tree path{stroke:var(--muted)}
+.wp-t{font-family:var(--f-body);font-size:12px;font-weight:500}
+.wp-c{font-family:var(--f-display);font-size:13.5px;font-weight:700;fill:#FFFFFF}
+.wp-m{font-family:var(--f-display);font-size:18px;font-weight:800;fill:#1F1A17}
+.wp-p{font-family:var(--f-display);font-size:12px;font-weight:700;fill:#FFFFFF}
+.wp-ps{font-family:var(--f-body);font-size:9px;fill:#FFFFFF;opacity:.9}
+.wp-legend{display:flex;flex-wrap:wrap;gap:8px 22px;font-size:.84rem;color:var(--muted)}
+.wp-legend span{display:inline-flex;align-items:center;gap:8px}
+.wp-legend .k{width:14px;height:14px;border-radius:3px;border:1px solid transparent;display:inline-block}
+.wp-legend .k.round{border-radius:50%}
+.wp-legend .ln{width:26px;height:0;display:inline-block;border-top:2px solid #D2543A}
+.wp-legend .ln.dot{border-top-style:dotted}
+.wp-legend .ln.blue{border-top-color:#3D7FD1}
+
 .svgcard svg{display:block;width:100%;height:auto;min-width:340px}
 .ring-a{fill:var(--sky-soft);stroke:var(--line)}
 .ring-b{fill:var(--paper);stroke:var(--line)}
@@ -295,15 +310,198 @@ tr.hidden-row > *{background:var(--sky-soft)}
   <div class="intro">
     <span class="label">Wicked problem map</span>
     <h2>How the causes connect</h2>
-    <p class="statement">One life event, on top of high rent and thin support, can be enough.</p>
+    <p class="statement">Five categories of root causes. Dotted and colored lines show how causes in one area feed problems in another.</p>
   </div>
-  <div class="panel chains">
-    <div class="chain"><span class="src">Health → Economic → Housing</span><div class="row"><span class="step">Illness</span><span class="arr">→</span><span class="step">Job loss</span><span class="arr">→</span><span class="step">Missed rent</span><span class="arr">→</span><span class="step end">Eviction</span></div></div>
-    <div class="chain"><span class="src">Life events → Economic</span><div class="row"><span class="step">Death of a spouse</span><span class="arr">→</span><span class="step">Second income ends</span><span class="arr">→</span><span class="step end">Rent unaffordable</span></div></div>
-    <div class="chain"><span class="src">Economic → Housing system</span><div class="row"><span class="step">Rent rising faster than income</span><span class="arr">+</span><span class="step">Years-long waitlists</span><span class="arr">→</span><span class="step end">Nowhere affordable to move</span></div></div>
-    <div class="chain"><span class="src">Community → Policy</span><div class="row"><span class="step">Isolation</span><span class="arr">→</span><span class="step">No one notices the crisis</span><span class="arr">→</span><span class="step end">No access to prevention</span></div></div>
-    <div class="chain"><span class="src">Policy</span><div class="row"><span class="step">Small, unstable prevention funding</span><span class="arr">→</span><span class="step end">Help arrives only after eviction</span></div></div>
-  </div>
+  <figure class="map-fig">
+    <div class="svgcard wpm">
+<svg viewBox="0 0 1500 1010" role="img" aria-label="Wicked problem map of homelessness in Orange County: five categories of root causes, secondary causes, consequences and the connections between them">
+<defs><marker id="wp-arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#D2543A"/></marker><marker id="wp-arr-b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#3D7FD1"/></marker></defs>
+<g fill="none" stroke-width="1.6">
+<path d="M1130 590 C900 590 640 145 376 185" stroke="#D2543A" stroke-dasharray="2 5" stroke-linecap="round" marker-end="url(#wp-arr)"/>
+<path d="M1130 100 C900 30 620 30 376 110" stroke="#D2543A" stroke-dasharray="2 5" stroke-linecap="round" marker-end="url(#wp-arr)"/>
+<path d="M1130 250 C900 250 640 350 376 380" stroke="#D2543A" stroke-dasharray="2 5" stroke-linecap="round" marker-end="url(#wp-arr)"/>
+<path d="M215 700 C185 725 185 775 211 796" stroke="#D2543A" opacity=".85" marker-end="url(#wp-arr)"/>
+<path d="M215 950 C178 920 178 835 211 806" stroke="#D2543A" opacity=".85" marker-end="url(#wp-arr)"/>
+<path d="M1130 810 C1100 775 1100 700 1126 671" stroke="#D2543A" opacity=".85" marker-end="url(#wp-arr)"/>
+<path d="M97.5 513.0 C97.5 470 272.5 440 272.5 408.0" stroke="#3D7FD1" marker-end="url(#wp-arr-b)"/>
+<path d="M117.5 585.5 C117.5 575 252.5 585 252.5 563.0" stroke="#3D7FD1" marker-end="url(#wp-arr-b)"/>
+</g>
+<g fill="none" class="wp-tree">
+<path d="M665 480 C665 185 665 185 580 185" stroke-width="2.4"/>
+<path d="M640 511 C610 511 610 530 580 530" stroke-width="2.4"/>
+<path d="M665 542 C665 875 665 875 580 875" stroke-width="2.4"/>
+<path d="M835 480 C835 212 835 212 920 212" stroke-width="2.4"/>
+<path d="M835 542 C835 690 835 690 920 690" stroke-width="2.4"/>
+<path d="M430 185 C395 185 405 110 370 110" stroke-width="1.2"/>
+<path d="M215 110 L175 110" stroke-width="1.2"/>
+<path d="M430 185 C395 185 405 185 370 185" stroke-width="1.2"/>
+<path d="M215 185 L175 185" stroke-width="1.2"/>
+<path d="M430 185 C395 185 405 260 370 260" stroke-width="1.2"/>
+<path d="M215 260 L175 260" stroke-width="1.2"/>
+<path d="M430 530 C395 530 405 380 370 380" stroke-width="1.2"/>
+<path d="M215 380 L175 380" stroke-width="1.2"/>
+<path d="M430 530 C395 530 405 455 370 455" stroke-width="1.2"/>
+<path d="M430 530 C395 530 405 535 370 535" stroke-width="1.2"/>
+<path d="M215 535 L175 535" stroke-width="1.2"/>
+<path d="M430 530 C395 530 405 615 370 615" stroke-width="1.2"/>
+<path d="M215 615 L175 615" stroke-width="1.2"/>
+<path d="M430 530 C395 530 405 700 370 700" stroke-width="1.2"/>
+<path d="M430 875 C395 875 405 800 370 800" stroke-width="1.2"/>
+<path d="M215 800 L175 800" stroke-width="1.2"/>
+<path d="M430 875 C395 875 405 875 370 875" stroke-width="1.2"/>
+<path d="M215 875 L175 875" stroke-width="1.2"/>
+<path d="M430 875 C395 875 405 950 370 950" stroke-width="1.2"/>
+<path d="M1070 212 C1105 212 1095 100 1130 100" stroke-width="1.2"/>
+<path d="M1285 100 L1325 100" stroke-width="1.2"/>
+<path d="M1070 212 C1105 212 1095 175 1130 175" stroke-width="1.2"/>
+<path d="M1285 175 L1325 175" stroke-width="1.2"/>
+<path d="M1070 212 C1105 212 1095 250 1130 250" stroke-width="1.2"/>
+<path d="M1285 250 L1325 250" stroke-width="1.2"/>
+<path d="M1070 212 C1105 212 1095 325 1130 325" stroke-width="1.2"/>
+<path d="M1285 325 L1325 325" stroke-width="1.2"/>
+<path d="M1070 690 C1105 690 1095 590 1130 590" stroke-width="1.2"/>
+<path d="M1285 590 L1325 590" stroke-width="1.2"/>
+<path d="M1070 690 C1105 690 1095 665 1130 665" stroke-width="1.2"/>
+<path d="M1070 690 C1105 690 1095 735 1130 735" stroke-width="1.2"/>
+<path d="M1070 690 C1105 690 1095 810 1130 810" stroke-width="1.2"/>
+<path d="M1285 810 L1325 810" stroke-width="1.2"/>
+</g>
+<path d="M465 375 L370 380" stroke="#7FA347" stroke-width="1.4" fill="none"/>
+<path d="M465 285 L370 185" stroke="#7FA347" stroke-width="1.4" fill="none"/>
+<circle cx="505" cy="375" r="40" fill="#8DB255" stroke="#FFFFFF" stroke-width="2"/>
+<text class="wp-p" x="505" y="369" text-anchor="middle">Home Safe</text>
+<text class="wp-ps" x="505" y="384" text-anchor="middle">existing project</text>
+<circle cx="505" cy="285" r="40" fill="#8DB255" stroke="#FFFFFF" stroke-width="2"/>
+<text class="wp-p" x="505" y="272" text-anchor="middle">OC rental</text>
+<text class="wp-p" x="505" y="286" text-anchor="middle">aid pilot</text>
+<text class="wp-ps" x="505" y="301" text-anchor="middle">existing project</text>
+<rect x="215" y="88.0" width="155" height="44" rx="7" fill="#C8602A"/>
+<text class="wp-t" x="292.5" y="106.5" text-anchor="middle" fill="#FFFFFF">Rent rising faster</text>
+<text class="wp-t" x="292.5" y="121.5" text-anchor="middle" fill="#FFFFFF">than income</text>
+<rect x="20" y="88.0" width="155" height="44" rx="7" fill="#DDEFF3" stroke="#9CC9D3"/>
+<text class="wp-t" x="97.5" y="106.5" text-anchor="middle" fill="#1E3A44">One shock away</text>
+<text class="wp-t" x="97.5" y="121.5" text-anchor="middle" fill="#1E3A44">from eviction</text>
+<rect x="215" y="163.0" width="155" height="44" rx="7" fill="#C8602A"/>
+<text class="wp-t" x="292.5" y="181.5" text-anchor="middle" fill="#FFFFFF">Job loss</text>
+<text class="wp-t" x="292.5" y="196.5" text-anchor="middle" fill="#FFFFFF">(self or spouse)</text>
+<rect x="20" y="170.5" width="155" height="29" rx="7" fill="#DDEFF3" stroke="#9CC9D3"/>
+<text class="wp-t" x="97.5" y="189.0" text-anchor="middle" fill="#1E3A44">Missed rent</text>
+<rect x="215" y="238.0" width="155" height="44" rx="7" fill="#EDB78E"/>
+<text class="wp-t" x="292.5" y="256.5" text-anchor="middle" fill="#3A2414">Fixed incomes:</text>
+<text class="wp-t" x="292.5" y="271.5" text-anchor="middle" fill="#3A2414">Social Security, SSI</text>
+<rect x="20" y="238.0" width="155" height="44" rx="7" fill="#DDEFF3" stroke="#9CC9D3"/>
+<text class="wp-t" x="97.5" y="256.5" text-anchor="middle" fill="#1E3A44">Little room to</text>
+<text class="wp-t" x="97.5" y="271.5" text-anchor="middle" fill="#1E3A44">absorb rent hikes</text>
+<rect x="215" y="358.0" width="155" height="44" rx="7" fill="#C8602A"/>
+<text class="wp-t" x="292.5" y="376.5" text-anchor="middle" fill="#FFFFFF">Prevention funding</text>
+<text class="wp-t" x="292.5" y="391.5" text-anchor="middle" fill="#FFFFFF">small and unstable</text>
+<rect x="20" y="358.0" width="155" height="44" rx="7" fill="#DDEFF3" stroke="#9CC9D3"/>
+<text class="wp-t" x="97.5" y="376.5" text-anchor="middle" fill="#1E3A44">Help arrives only</text>
+<text class="wp-t" x="97.5" y="391.5" text-anchor="middle" fill="#1E3A44">after eviction</text>
+<rect x="215" y="425.5" width="155" height="59" rx="7" fill="#EDB78E"/>
+<text class="wp-t" x="292.5" y="444.0" text-anchor="middle" fill="#3A2414">Federal funds favor</text>
+<text class="wp-t" x="292.5" y="459.0" text-anchor="middle" fill="#3A2414">people already</text>
+<text class="wp-t" x="292.5" y="474.0" text-anchor="middle" fill="#3A2414">homeless</text>
+<rect x="215" y="513.0" width="155" height="44" rx="7" fill="#C8602A"/>
+<text class="wp-t" x="292.5" y="531.5" text-anchor="middle" fill="#FFFFFF">Point-in-Time count</text>
+<text class="wp-t" x="292.5" y="546.5" text-anchor="middle" fill="#FFFFFF">misses people</text>
+<rect x="20" y="513.0" width="155" height="44" rx="7" fill="#DDEFF3" stroke="#9CC9D3"/>
+<text class="wp-t" x="97.5" y="531.5" text-anchor="middle" fill="#1E3A44">Funding based on</text>
+<text class="wp-t" x="97.5" y="546.5" text-anchor="middle" fill="#1E3A44">an undercount</text>
+<rect x="215" y="593.0" width="155" height="44" rx="7" fill="#C8602A"/>
+<text class="wp-t" x="292.5" y="611.5" text-anchor="middle" fill="#FFFFFF">Encampment removals</text>
+<text class="wp-t" x="292.5" y="626.5" text-anchor="middle" fill="#FFFFFF">(Grants Pass, 2024)</text>
+<rect x="20" y="585.5" width="155" height="59" rx="7" fill="#DDEFF3" stroke="#9CC9D3"/>
+<text class="wp-t" x="97.5" y="604.0" text-anchor="middle" fill="#1E3A44">People pushed</text>
+<text class="wp-t" x="97.5" y="619.0" text-anchor="middle" fill="#1E3A44">elsewhere, harder</text>
+<text class="wp-t" x="97.5" y="634.0" text-anchor="middle" fill="#1E3A44">to count</text>
+<rect x="215" y="678.0" width="155" height="44" rx="7" fill="#EDB78E"/>
+<text class="wp-t" x="292.5" y="696.5" text-anchor="middle" fill="#3A2414">Prop 13 limits local</text>
+<text class="wp-t" x="292.5" y="711.5" text-anchor="middle" fill="#3A2414">revenue (1978)</text>
+<rect x="215" y="778.0" width="155" height="44" rx="7" fill="#C8602A"/>
+<text class="wp-t" x="292.5" y="796.5" text-anchor="middle" fill="#FFFFFF">Shortage of</text>
+<text class="wp-t" x="292.5" y="811.5" text-anchor="middle" fill="#FFFFFF">affordable units</text>
+<rect x="20" y="778.0" width="155" height="44" rx="7" fill="#DDEFF3" stroke="#9CC9D3"/>
+<text class="wp-t" x="97.5" y="796.5" text-anchor="middle" fill="#1E3A44">Nowhere affordable</text>
+<text class="wp-t" x="97.5" y="811.5" text-anchor="middle" fill="#1E3A44">to move</text>
+<rect x="215" y="853.0" width="155" height="44" rx="7" fill="#EDB78E"/>
+<text class="wp-t" x="292.5" y="871.5" text-anchor="middle" fill="#3A2414">Years-long waitlists,</text>
+<text class="wp-t" x="292.5" y="886.5" text-anchor="middle" fill="#3A2414">voucher lotteries</text>
+<rect x="20" y="853.0" width="155" height="44" rx="7" fill="#DDEFF3" stroke="#9CC9D3"/>
+<text class="wp-t" x="97.5" y="871.5" text-anchor="middle" fill="#1E3A44">Help out of reach</text>
+<text class="wp-t" x="97.5" y="886.5" text-anchor="middle" fill="#1E3A44">for years</text>
+<rect x="215" y="928.0" width="155" height="44" rx="7" fill="#EDB78E"/>
+<text class="wp-t" x="292.5" y="946.5" text-anchor="middle" fill="#3A2414">Federal housing</text>
+<text class="wp-t" x="292.5" y="961.5" text-anchor="middle" fill="#3A2414">cuts (1980s)</text>
+<rect x="1130" y="78.0" width="155" height="44" rx="7" fill="#C8602A"/>
+<text class="wp-t" x="1207.5" y="96.5" text-anchor="middle" fill="#FFFFFF">Death of a spouse</text>
+<text class="wp-t" x="1207.5" y="111.5" text-anchor="middle" fill="#FFFFFF">or parent</text>
+<rect x="1325" y="85.5" width="155" height="29" rx="7" fill="#DDEFF3" stroke="#9CC9D3"/>
+<text class="wp-t" x="1402.5" y="104.0" text-anchor="middle" fill="#1E3A44">Second income ends</text>
+<rect x="1130" y="153.0" width="155" height="44" rx="7" fill="#C8602A"/>
+<text class="wp-t" x="1207.5" y="171.5" text-anchor="middle" fill="#FFFFFF">Divorce or</text>
+<text class="wp-t" x="1207.5" y="186.5" text-anchor="middle" fill="#FFFFFF">separation</text>
+<rect x="1325" y="153.0" width="155" height="44" rx="7" fill="#DDEFF3" stroke="#9CC9D3"/>
+<text class="wp-t" x="1402.5" y="171.5" text-anchor="middle" fill="#1E3A44">One income</text>
+<text class="wp-t" x="1402.5" y="186.5" text-anchor="middle" fill="#1E3A44">instead of two</text>
+<rect x="1130" y="228.0" width="155" height="44" rx="7" fill="#C8602A"/>
+<text class="wp-t" x="1207.5" y="246.5" text-anchor="middle" fill="#FFFFFF">Isolation, few</text>
+<text class="wp-t" x="1207.5" y="261.5" text-anchor="middle" fill="#FFFFFF">support networks</text>
+<rect x="1325" y="228.0" width="155" height="44" rx="7" fill="#DDEFF3" stroke="#9CC9D3"/>
+<text class="wp-t" x="1402.5" y="246.5" text-anchor="middle" fill="#1E3A44">No one notices</text>
+<text class="wp-t" x="1402.5" y="261.5" text-anchor="middle" fill="#1E3A44">the crisis early</text>
+<rect x="1130" y="303.0" width="155" height="44" rx="7" fill="#EDB78E"/>
+<text class="wp-t" x="1207.5" y="321.5" text-anchor="middle" fill="#3A2414">Neighborhood</text>
+<text class="wp-t" x="1207.5" y="336.5" text-anchor="middle" fill="#3A2414">opposition (NIMBY)</text>
+<rect x="1325" y="303.0" width="155" height="44" rx="7" fill="#DDEFF3" stroke="#9CC9D3"/>
+<text class="wp-t" x="1402.5" y="321.5" text-anchor="middle" fill="#1E3A44">Shelter plans</text>
+<text class="wp-t" x="1402.5" y="336.5" text-anchor="middle" fill="#1E3A44">withdrawn (2018)</text>
+<rect x="1130" y="568.0" width="155" height="44" rx="7" fill="#C8602A"/>
+<text class="wp-t" x="1207.5" y="586.5" text-anchor="middle" fill="#FFFFFF">Illness</text>
+<text class="wp-t" x="1207.5" y="601.5" text-anchor="middle" fill="#FFFFFF">(self or spouse)</text>
+<rect x="1325" y="568.0" width="155" height="44" rx="7" fill="#DDEFF3" stroke="#9CC9D3"/>
+<text class="wp-t" x="1402.5" y="586.5" text-anchor="middle" fill="#1E3A44">Can't keep</text>
+<text class="wp-t" x="1402.5" y="601.5" text-anchor="middle" fill="#1E3A44">working</text>
+<rect x="1130" y="643.0" width="155" height="44" rx="7" fill="#C8602A"/>
+<text class="wp-t" x="1207.5" y="661.5" text-anchor="middle" fill="#FFFFFF">Mental health</text>
+<text class="wp-t" x="1207.5" y="676.5" text-anchor="middle" fill="#FFFFFF">conditions</text>
+<rect x="1130" y="720.5" width="155" height="29" rx="7" fill="#C8602A"/>
+<text class="wp-t" x="1207.5" y="739.0" text-anchor="middle" fill="#FFFFFF">Substance use</text>
+<rect x="1130" y="788.0" width="155" height="44" rx="7" fill="#EDB78E"/>
+<text class="wp-t" x="1207.5" y="806.5" text-anchor="middle" fill="#3A2414">Psychiatric hospitals</text>
+<text class="wp-t" x="1207.5" y="821.5" text-anchor="middle" fill="#3A2414">close (1967)</text>
+<rect x="1325" y="788.0" width="155" height="44" rx="7" fill="#DDEFF3" stroke="#9CC9D3"/>
+<text class="wp-t" x="1402.5" y="806.5" text-anchor="middle" fill="#1E3A44">Gap in</text>
+<text class="wp-t" x="1402.5" y="821.5" text-anchor="middle" fill="#1E3A44">community care</text>
+<rect x="430" y="162.0" width="150" height="46" rx="4" fill="#1F1A17" stroke="#4A4038"/>
+<text class="wp-c" x="505.0" y="190" text-anchor="middle">Work / Economic</text>
+<rect x="430" y="507.0" width="150" height="46" rx="4" fill="#1F1A17" stroke="#4A4038"/>
+<text class="wp-c" x="505.0" y="527" text-anchor="middle">Governance /</text>
+<text class="wp-c" x="505.0" y="543" text-anchor="middle">Political</text>
+<rect x="430" y="852.0" width="150" height="46" rx="4" fill="#1F1A17" stroke="#4A4038"/>
+<text class="wp-c" x="505.0" y="872" text-anchor="middle">Tech /</text>
+<text class="wp-c" x="505.0" y="888" text-anchor="middle">Infrastructure</text>
+<rect x="920" y="189.0" width="150" height="46" rx="4" fill="#1F1A17" stroke="#4A4038"/>
+<text class="wp-c" x="995.0" y="217" text-anchor="middle">Social</text>
+<rect x="920" y="667.0" width="150" height="46" rx="4" fill="#1F1A17" stroke="#4A4038"/>
+<text class="wp-c" x="995.0" y="695" text-anchor="middle">Health</text>
+<rect x="640" y="480" width="220" height="62" rx="4" fill="#FFFFFF" stroke="#1F1A17" stroke-width="2.5"/>
+<text class="wp-m" x="750.0" y="507" text-anchor="middle">Homelessness in</text>
+<text class="wp-m" x="750.0" y="528" text-anchor="middle">Orange County</text>
+</svg>
+    </div>
+    <div class="wp-legend">
+      <span><i class="k" style="background:#1F1A17"></i>Categories of root causes</span>
+      <span><i class="k" style="background:#C8602A"></i>Root causes</span>
+      <span><i class="k" style="background:#EDB78E"></i>Secondary root causes</span>
+      <span><i class="k" style="background:#DDEFF3;border-color:#9CC9D3"></i>Consequences</span>
+      <span><i class="ln dot"></i>Connection from a root cause</span>
+      <span><i class="ln solid"></i>Connection from a secondary cause</span>
+      <span><i class="ln blue"></i>Connection from a consequence</span>
+      <span><i class="k round" style="background:#8DB255"></i>Existing project</span>
+    </div>
+    <figcaption class="small muted">Figure 2. Wicked problem map of homelessness in Orange County</figcaption>
+  </figure>
 </section>
 
 <section id="stakeholders">
@@ -349,7 +547,7 @@ tr.hidden-row > *{background:var(--sky-soft)}
           <text class="t-c" x="260" y="560" text-anchor="middle">the count · waitlists · weather</text>
         </svg>
         </div>
-        <figcaption class="small muted">Figure 2. Stakeholders from the view of a person at risk</figcaption>
+        <figcaption class="small muted">Figure 3. Stakeholders from the view of a person at risk</figcaption>
       </figure>
       <div class="txt">
         <span class="label">View 1</span>
@@ -378,7 +576,7 @@ tr.hidden-row > *{background:var(--sky-soft)}
           <text class="t" x="286" y="390">Families</text><text class="t" x="286" y="410">Nonprofits</text><text class="t" x="286" y="430">Senior centers</text>
         </svg>
         </div>
-        <figcaption class="small muted">Figure 3. Stakeholders by power and interest</figcaption>
+        <figcaption class="small muted">Figure 4. Stakeholders by power and interest</figcaption>
       </figure>
       <div class="txt">
         <span class="label">View 2</span>
